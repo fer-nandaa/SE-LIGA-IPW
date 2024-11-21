@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Musical - Tema RBD e Mais!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #9c1f27;
+    }
+
+    .navbar-brand {
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    .navbar-brand:hover {
+      color: #ffcc00;
+    }
+
+    .card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+      background-color: #9c1f27;
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      font-size: 1.4rem;
+    }
+
+    .card-body {
+      background-color: #f1f1f1;
+      padding: 30px;
+    }
+
+    .btn-submit {
+      background-color: #9c1f27;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 5px;
+    }
+
+    .btn-submit:hover {
+      background-color: #a8323d;
+    }
+
+    .footer {
+      background-color: #9c1f27;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 30px;
+      font-size: 1rem;
+    }
+
+    .footer a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .question-container {
+      margin-bottom: 20px;
+    }
+
+    .question-container label {
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .question-container input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    #resultado h4 {
+      font-size: 1.3rem;
+      color: #9c1f27;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="#">Quiz Musical</a>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <div class="card">
+          <div class="card-header">Desafie seus conhecimentos musicais!</div>
+          <div class="card-body">
+            <form id="quizForm">
+              
+              <div class="question-container">
+                <label for="pergunta1">Qual é o título do último álbum de estúdio do RBD, lançado em 2009?</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1a" value="1"> <label for="pergunta1a">Para Olvidarte de Mí</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1b" value="0"> <label for="pergunta1b">Rebelde</label><br>
+                <input type="radio" name="pergunta1" id="pergunta1c" value="0"> <label for="pergunta1c">Nuestro Amor</label><br>
+              </div>
+
+              <div class="question-container">
+                <label for="pergunta2">Em que ano Michael Jackson lançou o icônico álbum "Thriller"?</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2a" value="0"> <label for="pergunta2a">1981</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2b" value="1"> <label for="pergunta2b">1982</label><br>
+                <input type="radio" name="pergunta2" id="pergunta2c" value="0"> <label for="pergunta2c">1983</label><br>
+              </div>
+
+              <div class="question-container">
+                <label for="pergunta3">Adele lançou "21", seu álbum mais vendido, com qual single que alcançou enorme sucesso?</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3a" value="1"> <label for="pergunta3a">Rolling in the Deep</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3b" value="0"> <label for="pergunta3b">Someone Like You</label><br>
+                <input type="radio" name="pergunta3" id="pergunta3c" value="0"> <label for="pergunta3c">Set Fire to the Rain</label><br>
+              </div>
+
+              <div class="question-container">
+                <label for="pergunta4">Qual foi o primeiro álbum de estúdio da banda britânica Queen?</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4a" value="1"> <label for="pergunta4a">Queen</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4b" value="0"> <label for="pergunta4b">A Night at the Opera</label><br>
+                <input type="radio" name="pergunta4" id="pergunta4c" value="0"> <label for="pergunta4c">News of the World</label><br>
+              </div>
+
+              <div class="question-container">
+                <label for="pergunta5">Quem compôs a famosa música "Imagine", um dos maiores hinos da paz?</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5a" value="0"> <label for="pergunta5a">Paul McCartney</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5b" value="1"> <label for="pergunta5b">John Lennon</label><br>
+                <input type="radio" name="pergunta5" id="pergunta5c" value="0"> <label for="pergunta5c">George Harrison</label><br>
+              </div>
+
+              <div class="question-container">
+                <label for="pergunta6">Em que cidade o famoso festival de música Woodstock foi realizado em 1969?</label><br>
+                <input type="radio" name="pergunta6" id="pergunta6a" value="1"> <label for="pergunta6a">Bethel, Nova York</label><br>
+                <input type="radio" name="pergunta6" id="pergunta6b" value="0"> <label for="pergunta6b">Los Angeles, Califórnia</label><br>
+                <input type="radio" name="pergunta6" id="pergunta6c" value="0"> <label for="pergunta6c">Chicago, Illinois</label><br>
+              </div>
+
+              <button type="submit" class="btn btn-submit">Enviar Respostas</button>
+            </form>
+
+            <div id="resultado" class="mt-4"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Para mais sobre música, acesse o <a href="https://www.spotify.com" target="_blank">Spotify</a>.</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    document.getElementById('quizForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      let acertos = 0;
+      const respostasCorretas = {
+        pergunta1: 1,
+        pergunta2: 1,
+        pergunta3: 1,
+        pergunta4: 1,
+        pergunta5: 1,
+        pergunta6: 1
+      };
+
+      const formElements = this.elements;
+      for (const element of formElements) {
+        if (element.type === 'radio' && element.checked) {
+          const pergunta = element.name;
+          if (element.value === respostasCorretas[pergunta].toString()) {
+            acertos++;
+          }
+        }
+      }
+
+      document.getElementById('resultado').innerHTML = `<h4>Você acertou ${acertos} de 6 perguntas!</h4>`;
+    });
+  </script>
+
+</body>
+</html>
